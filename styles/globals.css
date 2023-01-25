@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Brawler&family=Kreon&family=Mitr&display=swap");
+@layer base {
+  html,
+  body,
+  #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+  }
+  body {
+    @apply bg-dark-primary;
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .glassmorph {
+      /* @apply backdrop-blur-[16px] backdrop-saturate-[180%]; */
+      /* From https://css.glass */
+      -webkit-backdrop-filter: blur(4px);
+      background: rgba(34, 40, 49, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+  }
+
+  .mitr {
+    font-family: "Mitr", sans-serif;
+  }
+
+  .brawler {
+    font-family: "Brawler", serif;
+  }
+
+  .kreon{
+    font-family: 'Kreon';
+  }
+
+  .poppins{
+    font-family: 'Poppins',sans-serif;
+  }
+}
