@@ -4,6 +4,7 @@ import { BsCodeSlash } from 'react-icons/bs'
 import { AiOutlineMenu } from 'react-icons/ai'
 import clsx from 'clsx';
 import Navlink from './minorComponents/Navlink';
+import { IoMdClose } from 'react-icons/io'
 const CircularMenu = () => {
     const [open, setOpen] = useState(false);
     const navref = useRef([]);
@@ -13,69 +14,43 @@ const CircularMenu = () => {
             href: '#intro'
         },
         {
-            icon: <MdPermIdentity />,
-            href: '#intro'
+            icon: <MdWork />,
+            href: '#experiences'
         },
         {
-            icon: <MdPermIdentity />,
-            href: '#intro'
+            icon: <BsCodeSlash />,
+            href: '#projects'
         },
 
     ]
     const handleLinks = (e) => {
-        setOpen(!open);
+        setOpen(!open)
         const nav = navref.current;
         console.log(navref.current)
         let gap;
         nav.forEach((link, index) => {
             console.log('running')
             console.log(link.style.bottom)
-            if (link.style.gridArea == '') {
-                link.style.gridArea = '1 / 1 / 1 / 1';
+            if (link.style.bottom == '0px') {
+                if (index == 0)
+                    gap = 60;
+                else
+                    gap = 60 + 45 * (index);
+                link.style.bottom = `${gap}px`;
             } else {
-                link.style.gridArea = '';
+                link.style.bottom = '0px';
             }
-            // if (link.style.bottom == '0px') {
-            //     gap = 50 * (index + 1);
-            //     link.style.bottom = `${gap}px`;
-            // } else {
-            //     link.style.bottom = '0px';
-            // }
         })
     }
     return (
-        <div
-            style={{
-                position: 'fixed',
-                left: '50%',
-                bottom: '10%',
-                display: 'grid',
-                gridTemplateRows: '2.5rem 1fr',
-                transition: 'all 0.5s'
-            }}
-        >
-            <button
-                onClick={handleLinks}
-                style={{
-                    gridArea: '1 / 1 / 1 / 1',
-                }}
-                className={clsx({
-                    'bg-teal-700 bottom-0 flex justify-center items-center rounded-full z-10': true,
-                    'h-[2.5rem] w-[2.5rem]': !open,
-                    'h-[3.5rem] w-[3.5rem]': open
-                })}
-            >
-                <AiOutlineMenu />
-            </button>
+        <div className='fixed horizontal-center bottom-[10%] gap-2 h-[270px] w-[3.5rem] z-20'>
             {linkList.map((link, index) => {
                 return (
                     <a
                         key={link.href}
                         ref={ele => navref.current[index] = ele}
-                        className={'bg-teal-800 p-2 transition-all navlink'}
-                        style={{
-                            gridArea: '1 / 1 / 1 / 1'
-                        }}
+                        className={'absolute horizontal-center bg-teal-800 p-2 transition-all navlink drop-shadow-md'}
+                        style={{ bottom: '0px' }}
                         href={link.href}
                     >
                         {link.icon}
@@ -83,7 +58,17 @@ const CircularMenu = () => {
                 )
             })
             }
-
+            <button
+                onClick={handleLinks}
+                className={clsx({
+                    'absolute bg-teal-700 horizontal-center bottom-0 flex justify-center items-center rounded-full transition-all': true,
+                    'drop-shadow-md': true,
+                    'h-[2.5rem] w-[2.5rem]': !open,
+                    'h-[3.5rem] w-[3.5rem]': open
+                })}
+            >
+                {open ? <IoMdClose /> : <AiOutlineMenu />}
+            </button>
         </div>
     )
 }
