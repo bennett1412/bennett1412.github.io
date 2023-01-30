@@ -30,7 +30,9 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
   }
-
+  .navlink{
+    @apply bottom-0 h-[2.5rem] w-[2.5rem] flex justify-center items-center rounded-full;
+  }
   .mitr {
     font-family: "Mitr", sans-serif;
   }

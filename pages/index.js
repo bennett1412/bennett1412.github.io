@@ -1,5 +1,5 @@
 import { Inter } from '@next/font/google'
-import CircularMenu from '../components/CircularMenu'
+import Menu from '../components/Menu'
 import Experiences from '../components/Experiences'
 import Intro from '../components/Intro'
 import Projects from '../components/Projects'
@@ -11,7 +11,7 @@ export default function Home() {
       <Intro />
       <Experiences />
       <Projects />
-      <CircularMenu />
+      <Menu />
     </>
   )
 }

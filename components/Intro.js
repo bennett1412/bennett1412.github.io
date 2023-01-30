@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import ImageComponent from './minorComponents/ImageComponent'
 const Intro = () => {
     return (
         <section id='intro' className='relative h-screen'>
@@ -11,7 +12,6 @@ const Intro = () => {
                     A full stack web developer based in Kochi, Kerala.
                 </div>
             </div>
-            <Image className='block absolute bottom-0  align-middle' alt='layers' height={130} width={800} src={'/layers1.svg'} />
         </section>
     )
 }
