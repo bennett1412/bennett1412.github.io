@@ -11,15 +11,18 @@ const CircularMenu = () => {
     const linkList = [
         {
             icon: <MdPermIdentity />,
-            href: '#intro'
+            href: '#about',
+            tooltip: 'About'
         },
         {
             icon: <MdWork />,
-            href: '#experiences'
+            href: '#experiences',
+            tooltip: 'Experience'
         },
         {
             icon: <BsCodeSlash />,
-            href: '#projects'
+            href: '#projects',
+            tooltip: 'Projects'
         },
 
     ]
@@ -47,6 +50,7 @@ const CircularMenu = () => {
             {linkList.map((link, index) => {
                 return (
                     <a
+                        title={link.tooltip}
                         key={link.href}
                         ref={ele => navref.current[index] = ele}
                         className={'absolute horizontal-center bg-teal-800 p-2 transition-all navlink drop-shadow-md'}

@@ -4,7 +4,7 @@ import ImageComponent from './minorComponents/ImageComponent'
 
 const Intro = () => {
     return (
-        <section id='intro' className='relative h-screen'>
+        <section id='about' className='relative h-screen'>
             <div className='m-3 p-3 rounded-md flex flex-col gap-y-4 items-center'>
                 <div style={{
                     fontWeight: '400',
@@ -12,9 +12,6 @@ const Intro = () => {
                     lineHeight: '60px',
                 }} className='text-[#8bb82d] text-5xl text-center varela'>
                     Hey, I&apos;m Bennett
-                </div>
-                <div className='text-center poppins text-xl'>
-                    A full stack web developer based in Kochi, Kerala.
                 </div>
                 <div className='w-40 h-50 grid items-center'>
                     <div className="tk-blob" style={{
@@ -29,6 +26,11 @@ const Intro = () => {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img style={{ gridArea: '1 / 1 / 1 / 1' }} alt='profile-pic' className={'w-[90px] h-auto rounded-full justify-self-center z-10'} src={'/coat_profile_pic.jpg'} />
                 </div>
+                <div className='text-center poppins text-xl'>
+                    A full stack web developer based in Kochi, Kerala.
+                    <p className='font-bold ' >Transforming ideas into reality, one project at a time.</p>
+                </div>
+
             </div>
         </section >
     )
