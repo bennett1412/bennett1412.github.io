@@ -43,7 +43,7 @@ const CircularMenu = () => {
         })
     }
     return (
-        <div className='fixed horizontal-center bottom-[10%] gap-2 h-[270px] w-[3.5rem] z-20'>
+        <div className='fixed horizontal-center bottom-[10%] gap-2 h-[12.5rem] w-[3.5rem] z-20'>
             {linkList.map((link, index) => {
                 return (
                     <a
