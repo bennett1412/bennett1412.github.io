@@ -1,11 +1,46 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
+import styles from '../../styles/card.module.css';
+import { useInView } from 'react-intersection-observer';
+const ExperienceCard = ({ role, companyName, time, skills }) => {
+    const { ref: cardRef, inView, entry } = useInView({
+        threshold: 1
+    });
+    const face1 = useRef();
+    useEffect(() => {
+        console.log('viewing now')
+        let facediv = face1.current;
+        if (inView) {
+            // facediv.style.height = '50%';
+            // facediv.style.lineHeight = '1.5rem';
+            // facediv.style.borderRadius = '15px 15px 0 0';
+        } else {
+            // facediv.style.height = '';
+            // facediv.style.lineHeight = '';
+            // facediv.style.borderRadius = '';
+        }
 
-const ExperienceCard = () => {
+    }, [inView])
+
     return (
-        <div className='flex flex-col p-6 text-center bg-[#005F74] w-[300px] h-[180px] rounded-xl'>
-            <div className='text-xl'>Software Engineering Intern</div>
-            <div className='text-md text-cyan-300'>Content Turbine</div>
-            <div className='italic'>Aug 2022 - Oct 2022</div>
+        <div ref={cardRef} className='drop-shadow-md'>
+            <div className='card'>
+
+                <div ref={face1} className='face face2'>
+                    <div className='content'>
+                        <h3 className='font-semibold role'>{role}</h3>
+                        <p className='text-md strong company' >{companyName}</p>
+                        <p className='italic time'>{time}</p>
+                    </div>
+                </div>
+                <div className='face face1 '>
+                    <div className='content'>
+                        <h3 className='px-[8px]'>Skills:</h3>
+                        <div className='flex gap-1 flex-wrap'>
+                            {skills.map((skill, i) => <span key={i} className='skill'>{skill}</span>)}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

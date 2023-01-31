@@ -30,10 +30,10 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
   }
-  .navlink{
+  .navlink {
     @apply bottom-0 h-[2.5rem] w-[2.5rem] flex justify-center items-center rounded-full;
   }
-  .horizontal-center{
+  .horizontal-center {
     @apply -translate-x-[50%] left-[50%];
   }
   .mitr {
@@ -44,11 +44,96 @@
     font-family: "Brawler", serif;
   }
 
-  .kreon{
-    font-family: 'Kreon';
+  .kreon {
+    font-family: "Kreon";
   }
 
-  .poppins{
-    font-family: 'Poppins',sans-serif;
+  .poppins {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer components {
+
+  .card {
+    position: relative;
+    width: 300px;
+    min-height: 200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 15px;
+  }
+
+  .card .face {
+    /* position: absolute; */
+    left: 0;
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+  }
+  .card .face1{
+    position: absolute;
+  }
+  .card .face.face1 {
+    box-sizing: border-box;
+    padding: 0.25rem;
+    top: 50%;    
+  }
+
+  .card .face.face1 h2 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card .face.face1 .content {
+    margin: 0;
+    font-weight: 500;
+    color: black;
+  }
+
+  .card .face.face2 {
+    background: #005f74;
+    transition: 0.5s;
+    padding: 1rem;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    line-height: 3rem;
+    height: 100%;
+  }
+ 
+
+  .card .face.face1 .content .skill {
+    text-align: center;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    padding: 1.5px;
+    padding-inline: 8px;
+  }
+
+  /* @media (hover: hover) {
+    .card:hover .face.face2 {
+      height: 50%;
+      border-radius:  ;
+    }
+
+    .card:hover .face.face2 .content {
+      line-height: 1.5rem;
+    }
+  } */
+
+
+  .card .face.face2 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .card:hover .face.face2 h2 {
+    font-size: 2em;
   }
 }

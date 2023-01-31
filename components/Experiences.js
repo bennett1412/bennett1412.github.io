@@ -5,14 +5,28 @@ import ImageComponent from './minorComponents/ImageComponent'
 
 const Experiences = () => {
     return (
-        <section id='experiences' className='experience relative bg-teal-light-1 min-h-screen flex flex-col items-center gap-y-2'>
+        <section id='experiences' className='experience relative bg-teal-light-1 min-h-screen flex flex-col items-center gap-y-8'>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className={'w-screen bottom-[100%] absolute h-auto'} alt={'layers'} src='/layers1.svg' />
             <h2 className='text-2xl text-center h-10'>Experiences</h2>
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
-            <ExperienceCard />
+            <ExperienceCard
+                role={'Software Engineering Intern'}
+                companyName={'Content Turbine'}
+                time={'Aug 2022 - Oct 2022'}
+                skills={['React', 'Redux', 'Tiptap', 'Python']}
+            />
+            <ExperienceCard
+                role={'Full-stack Developer Intern'}
+                companyName={'TGH Tech'}
+                time={'May 2022 - July 2022'}
+                skills={['React', 'Redux', 'Express', 'Firebase Cloud Messaging', 'AWS Cognito']}
+            />
+            <ExperienceCard
+                role={'Software Engineering Intern'}
+                companyName={'Content Turbine'}
+                time={'Aug 2022 - Oct 2022'}
+                skills={['React', 'Redux', 'Tiptap', 'Python']}
+            />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className={'w-screen top-[100%] absolute h-auto z-5'} alt={'layers'} src='/layers2.svg' />
         </section>
