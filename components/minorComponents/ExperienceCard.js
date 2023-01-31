@@ -10,9 +10,9 @@ const ExperienceCard = ({ role, companyName, time, skills }) => {
         console.log('viewing now')
         let facediv = face1.current;
         if (inView) {
-            // facediv.style.height = '50%';
-            // facediv.style.lineHeight = '1.5rem';
-            // facediv.style.borderRadius = '15px 15px 0 0';
+            facediv.style.height = '50%';
+            facediv.style.lineHeight = '1.5rem';
+            facediv.style.borderRadius = '15px 15px 0 0';
         } else {
             // facediv.style.height = '';
             // facediv.style.lineHeight = '';
@@ -25,14 +25,14 @@ const ExperienceCard = ({ role, companyName, time, skills }) => {
         <div ref={cardRef} className='drop-shadow-md'>
             <div className='card'>
 
-                <div ref={face1} className='face face2'>
+                <div ref={face1} className='face front'>
                     <div className='content'>
                         <h3 className='font-semibold role'>{role}</h3>
                         <p className='text-md strong company' >{companyName}</p>
                         <p className='italic time'>{time}</p>
                     </div>
                 </div>
-                <div className='face face1 '>
+                <div className='face behind'>
                     <div className='content'>
                         <h3 className='px-[8px]'>Skills:</h3>
                         <div className='flex gap-1 flex-wrap'>

@@ -54,86 +54,46 @@
 }
 
 @layer components {
-
   .card {
-    position: relative;
     width: 300px;
     min-height: 200px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 15px;
+    height: 150px;    
   }
 
-  .card .face {
-    /* position: absolute; */
-    left: 0;
+  .front {
     width: 100%;
-    display: flex;
-    border-radius: 15px;
-  }
-  .card .face1{
-    position: absolute;
-  }
-  .card .face.face1 {
-    box-sizing: border-box;
-    padding: 0.25rem;
-    top: 50%;    
-  }
-
-  .card .face.face1 h2 {
-    margin: 0;
-    padding: 0;
-  }
-
-  .card .face.face1 .content {
-    margin: 0;
-    font-weight: 500;
-    color: black;
-  }
-
-  .card .face.face2 {
-    background: #005f74;
-    transition: 0.5s;
-    padding: 1rem;
-    justify-content: center;
-    text-align: center;
-    top: 0;
-    line-height: 3rem;
     height: 100%;
-  }
- 
-
-  .card .face.face1 .content .skill {
-    text-align: center;
-    background: black;
-    color: white;
+    background: #005F74;
+    line-height: 3rem;
+    position: relative;
+    padding: 0.5rem;
+    z-index: 5;
     border-radius: 15px;
-    padding: 1.5px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  .behind {
+    height: 50%;
+    position: relative;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    padding: 0.5rem;
+    background: white;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .behind h3{
+    color: black;
+    font-weight: 500;
+  }
+
+  .behind .skill{
+    padding: 3px;
     padding-inline: 8px;
-  }
-
-  /* @media (hover: hover) {
-    .card:hover .face.face2 {
-      height: 50%;
-      border-radius:  ;
-    }
-
-    .card:hover .face.face2 .content {
-      line-height: 1.5rem;
-    }
-  } */
-
-
-  .card .face.face2 h2 {
-    margin: 0;
-    padding: 0;
-    font-size: 10em;
-    color: #fff;
-    transition: 0.5s;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  .card:hover .face.face2 h2 {
-    font-size: 2em;
+    border-radius: 10px;
+    background:black;
   }
 }

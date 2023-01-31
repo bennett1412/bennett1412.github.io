@@ -19,16 +19,16 @@ const Experiences = () => {
                 role={'Full-stack Developer Intern'}
                 companyName={'TGH Tech'}
                 time={'May 2022 - July 2022'}
-                skills={['React', 'Redux', 'Express', 'Firebase Cloud Messaging', 'AWS Cognito']}
+                skills={['React', 'Redux', 'Node/Express.js', 'Firebase', 'AWS Cognito']}
             />
             <ExperienceCard
-                role={'Software Engineering Intern'}
-                companyName={'Content Turbine'}
-                time={'Aug 2022 - Oct 2022'}
-                skills={['React', 'Redux', 'Tiptap', 'Python']}
+                role={'Flutter Developer Intern'}
+                companyName={'CmtyHelp'}
+                time={'Jan 2022 - April 2022'}
+                skills={['Flutter', 'Firebase']}
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className={'w-screen top-[100%] absolute h-auto z-5'} alt={'layers'} src='/layers2.svg' />
+            <img className={'w-screen top-[100%] absolute h-auto z-20'} alt={'layers'} src='/layers2.svg' />
         </section>
     )
 }
