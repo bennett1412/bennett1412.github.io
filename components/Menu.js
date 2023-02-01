@@ -29,11 +29,8 @@ const CircularMenu = () => {
     const handleLinks = (e) => {
         setOpen(!open)
         const nav = navref.current;
-        console.log(navref.current)
         let gap;
         nav.forEach((link, index) => {
-            console.log('running')
-            console.log(link.style.bottom)
             if (link.style.bottom == '0px') {
                 if (index == 0)
                     gap = 60;

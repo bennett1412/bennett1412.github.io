@@ -13,8 +13,13 @@ module.exports = {
         'lemon-green': '#92DA7B',
         'dark-ternary': '#195073',
         'teal-light': '#00FFF5',
-        'teal-dark': '#00ADB5'
-      }
+        'teal-dark': '#00ADB5',
+        'black-dark': '#222831'
+      },
+      fontFamily: {
+        Inter: ['Inter', 'sans-serif'],
+        JetbrainsMono: ['Jetbrains Mono', 'monospace']
+      },
     },
   },
   plugins: [],

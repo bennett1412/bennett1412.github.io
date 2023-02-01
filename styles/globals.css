@@ -1,8 +1,8 @@
+@import url("http://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Inter&family=Poppins&family=Brawler&family=Kreon&family=Mitr&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Brawler&family=Kreon&family=Mitr&display=swap");
 @layer base {
   html,
   body,
@@ -57,13 +57,13 @@
   .card {
     width: 300px;
     min-height: 200px;
-    height: 150px;    
+    height: 150px;
   }
 
   .front {
     width: 100%;
     height: 100%;
-    background: #005F74;
+    background: #005f74;
     line-height: 3rem;
     position: relative;
     padding: 0.5rem;
@@ -85,15 +85,30 @@
     border-radius: 0 0 15px 15px;
   }
 
-  .behind h3{
+  .behind h3 {
     color: black;
     font-weight: 500;
   }
 
-  .behind .skill{
+  .behind .skill {
     padding: 3px;
     padding-inline: 8px;
     border-radius: 10px;
-    background:black;
+    background: black;
+  }
+
+  .project-card .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .project-card .body {
+    font-family: "Jetbrains Mono", monospace;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
   }
 }

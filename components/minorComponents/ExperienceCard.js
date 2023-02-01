@@ -7,7 +7,6 @@ const ExperienceCard = ({ role, companyName, time, skills }) => {
     });
     const face1 = useRef();
     useEffect(() => {
-        console.log('viewing now')
         let facediv = face1.current;
         if (inView) {
             facediv.style.height = '50%';
