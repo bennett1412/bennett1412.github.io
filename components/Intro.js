@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import ImageComponent from './minorComponents/ImageComponent'
 import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from 'react-icons/si';
+import { GrDocumentDownload } from 'react-icons/gr';
 const Intro = () => {
     return (
         <section id='about' className='relative h-screen'>
@@ -44,6 +45,7 @@ const Intro = () => {
                     <a rel="noopener noreferrer" target={'_blank'} href='https://github.com/bennett1412/'><SiGithub className='hover:lemon-shadow' size={25} /></a>
                     <a rel="noopener noreferrer" target={'_blank'} href='https://twitter.com/MadavanaB/'><SiTwitter size={25} className='hover:lemon-shadow' /></a>
                     <a rel="noopener noreferrer" target={'_blank'} title='bennettmadavana@gmail.com' href='mailto:bennettmadavana@gmail.com'><SiGmail className='hover:lemon-shadow' size={25} /></a>
+                    {/* <a rel="noopener noreferrer" target={'_blank'} title='/resume' href='mailto:bennettmadavana@gmail.com'><SiGmail className='hover:lemon-shadow' size={25} /></a> */}
                 </div>
 
             </div>

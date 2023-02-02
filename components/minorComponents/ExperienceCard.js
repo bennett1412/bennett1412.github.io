@@ -43,7 +43,7 @@ const ExperienceCard = ({ role, companyName, time, techStack, points }) => {
             </div>
             <div className='face behind'>
                 <div className='content'>
-                    <h3 className='px-[8px] font-black'>Tech Stack:</h3>
+                    <h3 className='px-[5px] font-black mb-1'>Tech Stack:</h3>
                     <div className='flex gap-1 flex-wrap'>
                         {techStack.map((skill, i) => <span key={i} className='skill'>{skill}</span>)}
                     </div>

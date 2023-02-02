@@ -1,5 +1,5 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import ProjectCard from './minorComponents/ProjectCard'
 import { SiReact, SiJavascript, SiHtml5, SiDjango, SiSqlite, SiPython, SiPhp } from 'react-icons/si';
 import Waves from './minorComponents/Waves';
 const Projects = () => {
@@ -34,8 +34,8 @@ const Projects = () => {
                     github={'https://github.com/bennett1412/library-management-system'}
                 />
             </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src='/layers3.svg' alt='layers' className='absolute top-[88%] w-screen' />
-            {/* <Waves /> */}
         </section>
     )
 }
