@@ -43,14 +43,14 @@ const CircularMenu = () => {
         })
     }
     return (
-        <div className='fixed horizontal-center bottom-[10%] gap-2 h-[12.5rem] w-[3.5rem] z-20'>
+        <div className='fixed horizontal-center bottom-[10%] gap-2 w-[3.5rem] z-20'>
             {linkList.map((link, index) => {
                 return (
                     <a
                         title={link.tooltip}
                         key={link.href}
                         ref={ele => navref.current[index] = ele}
-                        className={'absolute horizontal-center bg-teal-800 p-2 transition-all navlink drop-shadow-md'}
+                        className={'absolute horizontal-center bg-teal-800 p-2 transition-all navlink drop-shadow-md hover:bg-white hover:text-dark-primary'}
                         style={{ bottom: '0px' }}
                         href={link.href}
                     >

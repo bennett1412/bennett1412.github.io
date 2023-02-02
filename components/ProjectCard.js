@@ -25,17 +25,17 @@ const ProjectCard = ({ title, body, icons, github, live }) => {
     );
     return (
         <div ref={setRefs} className='w-[16rem] h-[20rem] opacity-0 bg-black-dark p-4 rounded-lg flex flex-col justify-between gap-y-4 z-10 project-card'>
-            <h3 className='title'>{title}</h3>
-            <p className='body'>{body}</p>
-            <div className='flex items-center gap-x-2'>
-                <p>Tools used: </p>
+            <h3 className='title h-[5rem] basis-2/6'>{title}</h3>
+            <p className='body basis-2/6'>{body}</p>
+            <div className='basis-1/6 flex items-center gap-x-2'>
+                <p>Tech Stack: </p>
                 <span className='flex items-center gap-x-2'>
                     {icons.map((Icon, i) => <Icon key={i} />)}
                 </span>
             </div>
-            <div className='flex gap-x-3'>
-                {github && <a href={github}><AiOutlineGithub size={30} /></a>}
-                {live && <a href={live}><TbView360 color='white' size={30} /></a>}
+            <div className='basis-1/6 flex gap-x-3'>
+                {github && <a className='hover:lemon-shadow' href={github}><AiOutlineGithub size={30} /></a>}
+                {live && <a className='hover:lemon-shadow' href={live}><TbView360 color='white' size={30} /></a>}
             </div>
         </div>
     )
