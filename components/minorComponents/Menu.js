@@ -3,7 +3,6 @@ import { MdPermIdentity, MdWork } from 'react-icons/md'
 import { BsCodeSlash } from 'react-icons/bs'
 import { AiOutlineMenu } from 'react-icons/ai'
 import clsx from 'clsx';
-import Navlink from './Navlink';
 import { IoMdClose } from 'react-icons/io'
 const CircularMenu = () => {
     const [open, setOpen] = useState(false);
