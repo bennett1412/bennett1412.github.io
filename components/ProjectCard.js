@@ -1,10 +1,30 @@
-import React from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { AiOutlineGithub } from 'react-icons/ai';
 import { TbView360 } from 'react-icons/tb';
+import { useInView } from 'react-intersection-observer';
 
 const ProjectCard = ({ title, body, icons, github, live }) => {
+
+    const card = useRef();
+    const { ref: inViewRef, inView, entry } = useInView({
+        threshold: 0.8
+    });
+    useEffect(() => {
+        let cardDiv = card.current;
+        if (inView) {
+            cardDiv.style.opacity = 1;
+        }
+
+    }, [inView])
+    const setRefs = useCallback(
+        (node) => {
+            card.current = node;
+            inViewRef(node);
+        },
+        [inViewRef],
+    );
     return (
-        <div className='w-[16rem] min-h-[20rem] bg-black-dark p-6 rounded-lg flex flex-col gap-y-8 z-10 project-card'>
+        <div ref={setRefs} className='w-[16rem] h-[20rem] opacity-0 bg-black-dark p-4 rounded-lg flex flex-col justify-between gap-y-4 z-10 project-card'>
             <h3 className='title'>{title}</h3>
             <p className='body'>{body}</p>
             <div className='flex items-center gap-x-2'>

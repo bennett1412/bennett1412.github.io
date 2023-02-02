@@ -55,9 +55,8 @@
 
 @layer components {
   .card {
-    width: 300px;
-    min-height: 200px;
-    height: 150px;
+    width: 21.8rem;
+    height: 29.5rem;
   }
 
   .front {
@@ -67,27 +66,39 @@
     line-height: 3rem;
     position: relative;
     padding: 0.5rem;
-    z-index: 5;
+    z-index: 6;
     border-radius: 15px;
     text-align: center;
     transition: all 0.5s;
   }
 
   .behind {
-    height: 50%;
-    position: relative;
+    height: 30%;
     z-index: 4;
     position: absolute;
-    top: 50%;
+    top: 70%;
     padding: 0.5rem;
     background: white;
     width: 100%;
     border-radius: 0 0 15px 15px;
   }
-
+    
   .behind h3 {
     color: black;
     font-weight: 500;
+  }
+  .front-second {
+    position: absolute;
+    top: 30%;
+    z-index: 5;
+    padding: 0.8rem;
+    height: 70%;
+    border-radius: 0 0 15px 15px;
+    transition: all 0.8s;
+  }
+
+  .front-second li {
+    margin-left: 1rem;
   }
 
   .behind .skill {
@@ -95,6 +106,10 @@
     padding-inline: 8px;
     border-radius: 10px;
     background: black;
+  }
+
+  .project-card{
+    transition: all 0.5s;
   }
 
   .project-card .title {
@@ -111,4 +126,11 @@
     font-size: 15px;
     line-height: 20px;
   }
+
+  a {
+    color: honeydew;
+    text-decoration: underline;
+    transition: all 1s;
+  }
+
 }

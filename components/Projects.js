@@ -1,6 +1,6 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
-import { SiReact, SiJavascript, SiHtml5, SiDjango, SiSqlite } from 'react-icons/si';
+import { SiReact, SiJavascript, SiHtml5, SiDjango, SiSqlite, SiPython, SiPhp } from 'react-icons/si';
 const Projects = () => {
     return (
         <section id='projects' className='min-h-screen relative bg-lemon-green pt-[6.5rem]  '>
@@ -9,8 +9,9 @@ const Projects = () => {
                 <ProjectCard
                     title={'Django-Blog-App'}
                     body={'A blog application made using the django framework'}
-                    icons={[SiSqlite, SiDjango]}
-                    github={'https://github.com/bennett1412/snakes-on-a-screen'}
+                    icons={[SiDjango, SiSqlite]}
+                    github={'https://github.com/bennett1412/Django-Blog-App'}
+                    live={'http://baconguy.pythonanywhere.com/blog/'}
                 />
                 <ProjectCard
                     title={'Snakes-on-the-screen'}
@@ -18,6 +19,18 @@ const Projects = () => {
                     icons={[SiJavascript, SiHtml5]}
                     github={'https://github.com/bennett1412/snakes-on-a-screen'}
                     live={'https://addons.mozilla.org/en-US/firefox/addon/snakes-on-a-screen/'}
+                />
+                <ProjectCard
+                    title={'Library Management System'}
+                    body={'A simple library management system made using LAMP stack and style with tailwindCSS'}
+                    icons={[SiPhp, SiHtml5]}
+                    github={'https://github.com/bennett1412/library-management-system'}
+                />
+                <ProjectCard
+                    title={'TweetHook'}
+                    body={'A Twitter bot that sends a twitter to you as dm to save it'}
+                    icons={[SiPython]}
+                    github={'https://github.com/bennett1412/library-management-system'}
                 />
             </div>
             <img src='/layers3.svg' alt='layers' className='absolute top-[88%] w-screen' />
