@@ -1,7 +1,6 @@
 import React from 'react'
 import ProjectCard from './minorComponents/ProjectCard'
 import { SiReact, SiJavascript, SiHtml5, SiDjango, SiSqlite, SiPython, SiPhp } from 'react-icons/si';
-import Waves from './minorComponents/Waves';
 const Projects = () => {
     return (
         <section id='projects' className='min-h-screen relative bg-lemon-green pt-[6.5rem]  '>
