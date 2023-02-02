@@ -11,7 +11,7 @@ const Intro = () => {
                     fontWeight: '400',
                     fontSize: '50px',
                     lineHeight: '60px',
-                }} className='text-[#8bb82d] text-5xl text-center varela'>
+                }} className='text-[#8bb82d] text-5xl text-center Varela'>
                     Hey, I&apos;m Bennett
                 </div>
                 <div className='w-40 h-50 grid items-center'>

@@ -18,7 +18,8 @@ module.exports = {
       },
       fontFamily: {
         Inter: ['Inter', 'sans-serif'],
-        JetbrainsMono: ['Jetbrains Mono', 'monospace']
+        JetbrainsMono: ['Jetbrains Mono', 'monospace'],
+        Varela: ['Varela', 'sans-serif']
       },
     },
   },

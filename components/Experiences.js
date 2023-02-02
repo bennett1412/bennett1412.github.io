@@ -28,7 +28,7 @@ const Experiences = () => {
                     points={[
                         <>Developed the REST API for <a href='https://www.boringbots.com/'>Boring Bots</a>. </>,
                         <>Added web push notifications using Firebase Cloud Messaging to VCTech platform.</>,
-                        <>Built the REST API for <a href='https://dev.thesocialtown.in/'>The Social Town</a> and used Amazon Cognito to add authentication to the same. </>
+                        <>Built the REST API for <a href='https://dev.thesocialtown.in/'>The Social Town</a> and used integrated AWS Cognito. </>
                     ]}
                 />
                 <ExperienceCard
