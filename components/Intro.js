@@ -14,7 +14,7 @@ const Intro = () => {
                 }} className='text-[#8bb82d] text-5xl text-center font-Varela'>
                     Hey, I&apos;m Bennett
                 </div>
-                <div className='w-40 h-50 grid items-center'>
+                <div className='w-40 h-50 grid items-center md:scale-110'>
                     <div className="tk-blob" style={{
                         ['--fill']: '#041925',
                         ['--time']: '12s',

@@ -34,8 +34,8 @@ const ProjectCard = ({ title, body, icons, github, live }) => {
                 </span>
             </div>
             <div className='basis-1/6 flex gap-x-3'>
-                {github && <a className='hover:lemon-shadow' href={github}><AiOutlineGithub size={30} /></a>}
-                {live && <a className='hover:lemon-shadow' href={live}><TbView360 color='white' size={30} /></a>}
+                {github && <a rel="noopener noreferrer" target={'_blank'} className='hover:lemon-shadow' href={github}><AiOutlineGithub size={30} /></a>}
+                {live && <a rel="noopener noreferrer" target={'_blank'} className='hover:lemon-shadow' href={live}><TbView360 color='white' size={30} /></a>}
             </div>
         </div>
     )

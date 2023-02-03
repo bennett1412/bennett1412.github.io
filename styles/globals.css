@@ -15,10 +15,10 @@
     @apply bg-dark-primary;
   }
 
-  @media only screen and (max-width: 600px) {
-    body {
-    }
+  a, button {
+    -webkit-tap-highlight-color: transparent;
   }
+
 
   @media (prefers-color-scheme: dark) {
     .glassmorph {

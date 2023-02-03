@@ -12,7 +12,7 @@ const Experiences = () => {
             <div className='flex flex-col p-5 justify-center items-center gap-8 md:flex-row md:gap-x-8 flex-wrap'>
                 <ExperienceCard
                     role={'Software Engineering Intern'}
-                    companyName={<a href='https://www.contentturbine.com/'>Content Turbine</a>}
+                    companyName={<a rel="noopener noreferrer" target={'_blank'} href='https://www.contentturbine.com/'>Content Turbine</a>}
                     time={'Aug 2022 - Oct 2022'}
                     techStack={['React', 'Redux', 'Tiptap', 'Python']}
                     points={[
@@ -22,18 +22,18 @@ const Experiences = () => {
                 />
                 <ExperienceCard
                     role={'Full-stack Developer Intern'}
-                    companyName={<a href='https://www.tghtech.com/'>TGH Tech</a>}
+                    companyName={<a rel="noopener noreferrer" target={'_blank'} href='https://www.tghtech.com/'>TGH Tech</a>}
                     time={'May 2022 - July 2022'}
                     techStack={['React', 'Redux', 'Node/Express.js', 'Firebase', 'AWS Cognito']}
                     points={[
-                        <>Developed the REST API for <a href='https://www.boringbots.com/'>Boring Bots</a>. </>,
+                        <>Developed the REST API for <a rel="noopener noreferrer" target={'_blank'} href='https://www.boringbots.com/'>Boring Bots</a>. </>,
                         <>Added web push notifications using Firebase Cloud Messaging to VCTech platform.</>,
-                        <>Built the REST API for <a href='https://dev.thesocialtown.in/'>The Social Town</a> and used integrated AWS Cognito. </>
+                        <>Built the REST API for <a rel="noopener noreferrer" target={'_blank'} href='https://dev.thesocialtown.in/'>The Social Town</a> and used integrated AWS Cognito. </>
                     ]}
                 />
                 <ExperienceCard
                     role={'Flutter Developer Intern'}
-                    companyName={<a href='https://cmtyhelp.com/'>CmtyHelp</a>}
+                    companyName={<a rel="noopener noreferrer" target={'_blank'} href='https://cmtyhelp.com/'>CmtyHelp</a>}
                     time={'Jan 2022 - April 2022'}
                     techStack={['Flutter', 'Firebase']}
                     points={[
