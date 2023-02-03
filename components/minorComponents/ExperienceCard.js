@@ -34,7 +34,7 @@ const ExperienceCard = ({ role, companyName, time, techStack, points }) => {
                     <p className='italic time'>{time}</p>
                 </div>
             </div>
-            <div ref={second} className='bg-black front-second font-JetbrainsMono'>
+            <div ref={second} className='bg-black front-second'>
                 <ul className='list-disc'>
                     {points.map((point, i) => {
                         return <li key={i} >{point}</li>;

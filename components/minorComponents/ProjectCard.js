@@ -25,8 +25,8 @@ const ProjectCard = ({ title, body, icons, github, live }) => {
     );
     return (
         <div ref={setRefs} className='w-[16rem] h-[20rem] opacity-0 bg-black-dark p-4 rounded-lg flex flex-col justify-between gap-y-4 z-10 project-card'>
-            <h3 className='title h-[5rem] basis-2/6'>{title}</h3>
-            <p className='body basis-2/6'>{body}</p>
+            <h3 className='title h-[5rem] basis-2/6 font-Inter'>{title}</h3>
+            <p className='body basis-2/6 font-JetbrainsMono'>{body}</p>
             <div className='basis-1/6 flex items-center gap-x-2'>
                 <p>Tech Stack: </p>
                 <span className='flex items-center gap-x-2'>

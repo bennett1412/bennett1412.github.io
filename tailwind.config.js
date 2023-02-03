@@ -19,7 +19,8 @@ module.exports = {
       fontFamily: {
         Inter: ['Inter', 'sans-serif'],
         JetbrainsMono: ['Jetbrains Mono', 'monospace'],
-        Varela: ['Varela', 'sans-serif']
+        Varela: ['Varela', 'sans-serif'],
+        Poppins: ['Poppins', 'sans-serif']
       },
     },
   },

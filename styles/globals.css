@@ -37,25 +37,6 @@
   .horizontal-center {
     @apply -translate-x-[50%] left-[50%];
   }
-
-  .mitr {
-    font-family: "Mitr", sans-serif;
-  }
-
-  .brawler {
-    font-family: "Brawler", serif;
-  }
-
-  .kreon {
-    font-family: "Kreon";
-  }
-
-  .poppins {
-    font-family: "Poppins", sans-serif;
-  }
-  .Varela {
-    font-family: "Varela", sans-serif;
-  }
 }
 
 @layer components {
@@ -129,7 +110,6 @@
   }
 
   .project-card .title {
-    font-family: "Inter";
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
@@ -137,7 +117,6 @@
   }
 
   .project-card .body {
-    font-family: "Jetbrains Mono", monospace;
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
