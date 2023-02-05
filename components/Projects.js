@@ -1,11 +1,23 @@
 import React from 'react'
 import ProjectCard from './minorComponents/ProjectCard'
-import { SiReact, SiJavascript, SiHtml5, SiDjango, SiSqlite, SiPython, SiPhp } from 'react-icons/si';
+import { SiReact, SiJavascript, SiHtml5, SiDjango, SiSqlite, SiPython, SiPhp, SiExpress, SiMongodb, SiRedux, SiFirebase } from 'react-icons/si';
 const Projects = () => {
     return (
         <section id='projects' className='min-h-screen relative bg-lemon-green pt-[6.5rem]  '>
             <h1 className='text-2xl font-semibold text-center text-black-dark'>Projects</h1>
             <div className='flex flex-col flex-wrap gap-y-5 justify-center items-center p-5 min-h-[30rem] md:flex-row md:gap-6'>
+                <ProjectCard
+                    title={'Do-note'}
+                    body={'A Google Keep like note taking app that has rich formatting options for a better user experience.'}
+                    icons={[SiReact, SiFirebase]}
+                    github={'https://github.com/bennett1412/do-note'}
+                />
+                <ProjectCard
+                    title={'Redsparks'}
+                    body={'A progressive web app for Upland gamers to trade in game items'}
+                    icons={[SiReact, SiExpress, SiMongodb, SiRedux]}
+                    github={'https://github.com/bennett1412/RedSparkINC-1'}
+                />
                 <ProjectCard
                     title={'Django-Blog-App'}
                     body={'A simple blog application.'}
@@ -30,7 +42,7 @@ const Projects = () => {
                     title={'TweetHook'}
                     body={'A Twitter bot that dms you a tweet to save it.'}
                     icons={[SiPython]}
-                    github={'https://github.com/bennett1412/library-management-system'}
+                    github={'https://github.com/bennett1412/tweethook'}
                 />
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -19,18 +19,6 @@
     -webkit-tap-highlight-color: transparent;
   }
 
-
-  @media (prefers-color-scheme: dark) {
-    .glassmorph {
-      /* @apply backdrop-blur-[16px] backdrop-saturate-[180%]; */
-      /* From https://css.glass */
-      -webkit-backdrop-filter: blur(4px);
-      background: rgba(34, 40, 49, 0.25);
-      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-    }
-  }
   .navlink {
     @apply bottom-0 h-[2.5rem] w-[2.5rem] flex justify-center items-center rounded-full;
   }
@@ -43,6 +31,7 @@
   .card {
     width: 20rem;
     height: 29rem;
+    position: relative;
   }
 
   .front {
