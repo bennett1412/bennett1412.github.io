@@ -44,7 +44,7 @@ const Experiences = () => {
                 />
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className={'w-screen top-[100%] absolute h-auto z-20'} alt={'layers'} src='/layers2.svg' />
+            <img className={'w-screen top-[100%] md:top-[96%]  absolute h-auto z-20'} alt={'layers'} src='/layers2.svg' />
         </section>
     )
 }

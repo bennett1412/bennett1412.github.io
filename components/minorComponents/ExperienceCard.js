@@ -11,11 +11,13 @@ const ExperienceCard = ({ role, companyName, time, techStack, points }) => {
         let facediv = face1.current;
         let secondDiv = second.current;
         if (inView) {
+            // setTimeout(() => {
             facediv.style.height = '30%';
             facediv.style.lineHeight = '2.5rem';
             facediv.style.borderRadius = '15px 15px 0 0';
             secondDiv.style.height = '40%';
             secondDiv.style.borderRadius = '0px';
+            // }, 500);
         } else {
             // facediv.style.height = '';
             // facediv.style.lineHeight = '';

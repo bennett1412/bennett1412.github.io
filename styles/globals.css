@@ -15,7 +15,8 @@
     @apply bg-dark-primary;
   }
 
-  a, button {
+  a,
+  button {
     -webkit-tap-highlight-color: transparent;
   }
 
@@ -43,9 +44,9 @@
     z-index: 6;
     border-radius: 15px;
     text-align: center;
-    transition: height, width 0.5s;
     line-height: 4rem;
     font-size: 1.2em;
+    transition: height 0.8s ease;
   }
 
   .behind {
@@ -70,7 +71,7 @@
     padding: 0.8rem;
     height: 70%;
     border-radius: 0 0 15px 15px;
-    transition: all 0.8s;
+    transition: height 0.8s ease;
   }
 
   .front-second li {
