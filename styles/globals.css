@@ -68,7 +68,7 @@
     position: absolute;
     top: 30%;
     z-index: 5;
-    padding: 0.8rem;
+    padding: 0.5rem;
     height: 70%;
     border-radius: 0 0 15px 15px;
     transition: height 0.8s ease;
@@ -94,11 +94,6 @@
     transform: scale(1.1);
   }
 
-  .lemon-shadow {
-    -webkit-filter: drop-shadow(0 0 0.56rem #92da7b);
-    filter: drop-shadow(0 0 0.56rem #92da7b);
-  }
-
   .project-card .title {
     font-style: normal;
     font-weight: 400;
@@ -116,5 +111,16 @@
     color: honeydew;
     text-decoration: underline;
     transition: all 1s;
+  }
+}
+
+@layer utilities {
+  .lemon-shadow {
+    -webkit-filter: drop-shadow(0 0 0.56rem #92da7b);
+    filter: drop-shadow(0 0 0.56rem #92da7b);
+  }
+  .hover-glow {
+    @apply hover:lemon-shadow;
+    transition: filter 0.9s;
   }
 }

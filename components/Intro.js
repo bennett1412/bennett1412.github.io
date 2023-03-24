@@ -3,6 +3,7 @@ import React from 'react'
 import ImageComponent from './minorComponents/ImageComponent'
 import { SiLinkedin, SiTwitter, SiGithub, SiGmail } from 'react-icons/si';
 import { GrDocumentDownload } from 'react-icons/gr';
+import { FaFileDownload } from 'react-icons/fa';
 const Intro = () => {
     return (
         <section id='about' className='relative h-screen'>
@@ -41,10 +42,12 @@ const Intro = () => {
                     <p className='font-bold ' >Transforming ideas into reality, one project at a time.</p>
                 </div>
                 <div className='flex gap-x-3'>
-                    <a rel="noopener noreferrer" target={'_blank'} href='https://www.linkedin.com/in/bennett-b-madavana-1a6b631b0/'><SiLinkedin className='hover:lemon-shadow' size={25} /></a>
-                    <a rel="noopener noreferrer" target={'_blank'} href='https://github.com/bennett1412/'><SiGithub className='hover:lemon-shadow' size={25} /></a>
-                    <a rel="noopener noreferrer" target={'_blank'} href='https://twitter.com/MadavanaB/'><SiTwitter size={25} className='hover:lemon-shadow' /></a>
-                    <a rel="noopener noreferrer" target={'_blank'} title='bennettmadavana@gmail.com' href='mailto:bennettmadavana@gmail.com'><SiGmail className='hover:lemon-shadow' size={25} /></a>
+                    <a rel="noopener noreferrer" target={'_blank'} href='https://www.linkedin.com/in/bennett-b-madavana-1a6b631b0/'><SiLinkedin className='hover-glow' size={25} /></a>
+                    <a rel="noopener noreferrer" target={'_blank'} href='https://github.com/bennett1412/'><SiGithub className='hover-glow' size={25} /></a>
+                    <a rel="noopener noreferrer" target={'_blank'} href='https://twitter.com/MadavanaB/'><SiTwitter size={25} className='hover-glow' /></a>
+                    <a rel="noopener noreferrer" target={'_blank'} title='bennettmadavana@gmail.com' href='mailto:bennettmadavana@gmail.com'><SiGmail className='hover-glow' size={25} /></a>
+                    <a rel="noopener noreferrer" target={'_blank'} title='Download Resume' href='/resume_v0.2.pdf'><FaFileDownload className='hover-glow' size={23} /></a>
+
                     {/* <a rel="noopener noreferrer" target={'_blank'} title='/resume' href='mailto:bennettmadavana@gmail.com'><SiGmail className='hover:lemon-shadow' size={25} /></a> */}
                 </div>
 
