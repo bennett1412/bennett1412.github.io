@@ -11,7 +11,7 @@ const Projects = () => {
                     body={'A Google Keep like note taking app that has rich formatting options for a better user experience.'}
                     icons={[SiReact, SiFirebase]}
                     github={'https://github.com/bennett1412/do-note'}
-                    live={'https://do-note-3f1f7.web.app/'}
+                    live={'https://do-note.vercel.app/auth'}
                 />
                 <ProjectCard
                     title={'Redsparks'}
