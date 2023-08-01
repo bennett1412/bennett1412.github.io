@@ -38,7 +38,7 @@ const Intro = () => {
                     <img style={{ gridArea: '1 / 1 / 1 / 1' }} alt='profile-pic' className={'w-[90px] h-auto rounded-full justify-self-center z-10'} src={'/coat_profile_pic.jpg'} />
                 </div>
                 <div className='text-center font-Poppins text-xl'>
-                    A full stack web developer based in Kochi, Kerala.
+                    A full stack web developer based in Melbourne, Australia.
                     <p className='font-bold ' >Transforming ideas into reality, one project at a time.</p>
                 </div>
                 <div className='flex gap-x-3'>
