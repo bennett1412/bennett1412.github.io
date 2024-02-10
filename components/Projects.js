@@ -47,7 +47,7 @@ const Projects = () => {
                 />
             </div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src='/layers3.svg' alt='layers' className='absolute top-[88%] w-screen' />
+            <img src='layers3.svg' alt='layers' className='absolute top-[88%] w-screen' />
         </section>
     )
 }
