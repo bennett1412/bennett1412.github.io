@@ -1,0 +1,126 @@
+/* @import url("http://fonts.googleapis.com/css2?family=Varela&family=JetBrains+Mono&family=Inter&family=Poppins&family=Brawler&family=Kreon&family=Mitr&display=swap"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #fullheight {
+    min-height: 100% !important;
+    height: 100%;
+  }
+  body {
+    @apply bg-dark-primary;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .navlink {
+    @apply bottom-0 h-[2.5rem] w-[2.5rem] flex justify-center items-center rounded-full;
+  }
+  .horizontal-center {
+    @apply -translate-x-[50%] left-[50%];
+  }
+}
+
+@layer components {
+  .card {
+    width: 20rem;
+    height: 29rem;
+    position: relative;
+  }
+
+  .front {
+    width: 100%;
+    height: 100%;
+    background: #005f74;
+    position: relative;
+    padding: 0.5rem;
+    z-index: 6;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 4rem;
+    font-size: 1.2em;
+    transition: height 0.8s ease;
+  }
+
+  .behind {
+    height: 30%;
+    z-index: 4;
+    position: absolute;
+    top: 70%;
+    padding: 0.5rem;
+    background: white;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .behind h3 {
+    color: black;
+    font-weight: 500;
+  }
+  .front-second {
+    position: absolute;
+    top: 30%;
+    z-index: 5;
+    padding: 0.5rem;
+    height: 70%;
+    border-radius: 0 0 15px 15px;
+    transition: height 0.8s ease;
+  }
+
+  .front-second li {
+    margin-left: 1rem;
+  }
+
+  .behind .skill {
+    padding: 3px;
+    padding-inline: 8px;
+    border-radius: 10px;
+    background: black;
+  }
+
+  .project-card {
+    transition: all 0.5s;
+  }
+
+  .project-card:hover {
+    transition: all 0.3s;
+    transform: scale(1.1);
+  }
+
+  .project-card .title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+
+  .project-card .body {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  a {
+    color: honeydew;
+    text-decoration: underline;
+    transition: all 1s;
+  }
+}
+
+@layer utilities {
+  .lemon-shadow {
+    -webkit-filter: drop-shadow(0 0 0.56rem #92da7b);
+    filter: drop-shadow(0 0 0.56rem #92da7b);
+  }
+  .hover-glow {
+    @apply hover:lemon-shadow;
+    transition: filter 0.9s;
+  }
+}
