@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
 
+
+
 const ImageComponent = ({ src, className, alt }) => {
     return (
         <div className={className}>
