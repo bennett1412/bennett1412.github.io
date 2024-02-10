@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
         {/* open graph meta tags */}
         <meta name="author" content="Bennett Baby Madavana" />
         <meta property="og:title" content="Bennett Baby Madavana - Software Developer Portfolio" />
