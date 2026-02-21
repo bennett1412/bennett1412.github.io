@@ -66,7 +66,7 @@ export function SummerIntro({ darkness }: Props) {
           className="font-['Inika',serif] text-[16px] md:text-[22px] leading-relaxed opacity-80 max-w-lg"
           style={{ color: textColor }}
         >
-          Full stack engineer who builds things end to end.
+          Software developer based in Melbourne.
         </p>
       </div>
 

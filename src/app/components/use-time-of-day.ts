@@ -2,17 +2,10 @@
 
 import { useState, useEffect } from "react";
 
-/** Returns a darkness value from 0 (full daylight) to 1 (full night) */
+/** Returns 0 (day) or 1 (night) — switches at 6 AM and 5 PM */
 function computeDarkness(): number {
-  const now = new Date();
-  const h = now.getHours() + now.getMinutes() / 60;
-
-  // 0-5: night, 5-7: dawn, 7-17: day, 17-20: dusk, 20-24: night
-  if (h < 5) return 1;
-  if (h < 7) return 0.5 * (1 + Math.cos(((h - 5) / 2) * Math.PI)); // 1→0
-  if (h < 17) return 0;
-  if (h < 20) return 0.5 * (1 - Math.cos(((h - 17) / 3) * Math.PI)); // 0→1
-  return 1;
+  const h = new Date().getHours();
+  return h >= 17 || h < 6 ? 1 : 0;
 }
 
 export function useTimeOfDay() {
