@@ -8,12 +8,12 @@ import { WinterProjects } from "./components/winter-projects";
 import { SpringContact } from "./components/spring-contact";
 
 export default function Page() {
-  const darkness = useTimeOfDay();
+  const { darkness, toggle } = useTimeOfDay();
 
   return (
     <div className="w-full h-screen overflow-y-scroll" style={{ scrollSnapType: "y mandatory", scrollBehavior: "smooth" }}>
       <Navigation darkness={darkness} />
-      <SummerIntro darkness={darkness} />
+      <SummerIntro darkness={darkness} onToggle={toggle} />
       <AutumnExperiences darkness={darkness} />
       <WinterProjects darkness={darkness} />
       <SpringContact darkness={darkness} />

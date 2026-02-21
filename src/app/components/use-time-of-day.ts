@@ -10,13 +10,20 @@ function computeDarkness(): number {
 
 export function useTimeOfDay() {
   const [darkness, setDarkness] = useState(computeDarkness);
+  const [overridden, setOverridden] = useState(false);
 
   useEffect(() => {
+    if (overridden) return;
     const id = setInterval(() => setDarkness(computeDarkness()), 60_000);
     return () => clearInterval(id);
-  }, []);
+  }, [overridden]);
 
-  return darkness;
+  const toggle = () => {
+    setDarkness((d) => (d === 1 ? 0 : 1));
+    setOverridden(true);
+  };
+
+  return { darkness, toggle };
 }
 
 /** Lerp between two hex colors by t (0-1), with optional alpha */
