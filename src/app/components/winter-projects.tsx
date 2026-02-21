@@ -7,24 +7,16 @@ interface Props {
 
 const projects = [
   {
-    title: "Frostbite UI",
-    tag: "Design System",
-    desc: "A comprehensive design system built for scalability, supporting 200+ components across web and mobile.",
+    title: "DoNote",
+    tag: "Full Stack",
+    desc: "A Google Keep variation with rich text editing, built with Next.js, TypeScript, and Supabase with automated CI/CD deployment.",
+    link: "https://github.com/bennett1412/do-note",
   },
   {
-    title: "Glacial Analytics",
-    tag: "Dashboard",
-    desc: "Real-time data visualization platform for monitoring climate metrics and environmental data.",
-  },
-  {
-    title: "Snowdrift",
-    tag: "Mobile App",
-    desc: "A mindfulness app with seasonal themes, helping users find calm through nature-inspired interfaces.",
-  },
-  {
-    title: "Permafrost CMS",
-    tag: "Web Platform",
-    desc: "An open-source content management system designed for creative portfolios and editorial sites.",
+    title: "Stky",
+    tag: "Chrome Extension",
+    desc: "A productivity-focused Chrome extension for persistent web page annotations using DOM manipulation and local storage.",
+    link: "https://github.com/bennett1412/stky",
   },
 ];
 
@@ -106,7 +98,7 @@ export function WinterProjects({ darkness }: Props) {
           className="font-['Inika',serif] text-[14px] md:text-[18px] opacity-60 mb-8 md:mb-12 max-w-lg"
           style={{ color: textColor }}
         >
-          Selected work from a quiet season of deep focus.
+           Things I've built on the side.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-4xl">
@@ -131,7 +123,13 @@ export function WinterProjects({ darkness }: Props) {
                 className="font-['Inika',serif] text-[22px] md:text-[26px] mb-2"
                 style={{ color: textColor }}
               >
-                {proj.title}
+                {proj.link ? (
+                  <a href={proj.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                    {proj.title} ↗
+                  </a>
+                ) : (
+                  proj.title
+                )}
               </h3>
               <p
                 className="font-['Inika',serif] text-[14px] opacity-60 leading-relaxed"

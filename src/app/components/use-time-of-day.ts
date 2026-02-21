@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 /** Returns a darkness value from 0 (full daylight) to 1 (full night) */

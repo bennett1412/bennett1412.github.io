@@ -5,14 +5,19 @@ interface Props {
 }
 
 const skills = [
-  "Product Design",
-  "UI/UX",
-  "Design Systems",
-  "React",
   "TypeScript",
-  "Figma",
-  "Prototyping",
-  "Motion Design",
+  "JavaScript",
+  "Python",
+  "React.js",
+  "Next.js",
+  "Node.js",
+  "Express.js",
+  "Flask",
+  "AWS",
+  "Supabase",
+  "Firebase",
+  "Jest",
+  "Cypress",
 ];
 
 function Petal({ className, size, color }: { className: string; size: number; color: string }) {
@@ -111,7 +116,7 @@ function FlowerBackground({ stemColor, petalColor }: { stemColor: string; petalC
 export function SpringContact({ darkness }: Props) {
   const skyColor = lerpColor("#d4ecd0", "#0e1f14", darkness);
   const textColor = lerpColor("#1a2e1a", "#e0f0e0", darkness);
-  const accentColor = lerpColor("#e8a0b8", "#8a4060", darkness);
+  const accentColor = lerpColor("#c23074", "#f07aaf", darkness);
   const cardBorder = lerpColor("#90c088", "#2a4a28", darkness);
   const petalColor = lerpColor("#f0b0c8", "#6a3050", darkness);
   const skillText = lerpColor("#2a4a28", "#a0d8a0", darkness);
@@ -151,7 +156,7 @@ export function SpringContact({ darkness }: Props) {
           className="font-['Inika',serif] text-[14px] md:text-[18px] opacity-60 mb-8 md:mb-12 max-w-lg"
           style={{ color: textColor }}
         >
-          Spring is for new beginnings. Let's create something together.
+          Always up for building something interesting. Let's talk.
         </p>
 
         <div className="flex flex-col lg:flex-row gap-8 md:gap-12 max-w-4xl">
@@ -197,34 +202,101 @@ export function SpringContact({ darkness }: Props) {
               </h3>
               <div className="flex flex-col gap-4">
                 <a
-                  href="mailto:bennett@example.com"
+                  href="mailto:bennettmadavana@gmail.com"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
                   style={{ color: accentColor }}
                 >
-                  bennett@example.com
+                  bennettmadavana@gmail.com
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/bennett1412/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
                   style={{ color: accentColor }}
                 >
                   LinkedIn
                 </a>
                 <a
-                  href="#"
-                  className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
-                  style={{ color: accentColor }}
-                >
-                  Dribbble
-                </a>
-                <a
-                  href="#"
+                  href="https://github.com/bennett1412"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
                   style={{ color: accentColor }}
                 >
                   GitHub
                 </a>
+                <a
+                  href="https://bennett1412.github.io/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
+                  style={{ color: accentColor }}
+                >
+                  Portfolio
+                </a>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Education & Achievements */}
+        <div className="flex flex-col lg:flex-row gap-8 md:gap-12 max-w-4xl mt-8 md:mt-12">
+          <div className="flex-1">
+            <h3
+              className="font-['Inika',serif] text-[20px] md:text-[24px] mb-4 md:mb-6"
+              style={{ color: textColor }}
+            >
+              Education
+            </h3>
+            <div
+              className="p-4 md:p-6 rounded-lg border backdrop-blur-sm"
+              style={{
+                backgroundColor: lerpColor("#c8e4c0", "#162418", darkness, 0.8),
+                borderColor: cardBorder,
+              }}
+            >
+              <p
+                className="font-['Inika',serif] text-[16px] md:text-[18px]"
+                style={{ color: textColor }}
+              >
+                Master of Information Technology
+              </p>
+              <p
+                className="font-['Inika',serif] text-[14px] opacity-70 mt-1"
+                style={{ color: textColor }}
+              >
+                Monash University, Clayton
+              </p>
+              <p
+                className="font-['Inika',serif] text-[13px] opacity-50 mt-1"
+                style={{ color: textColor }}
+              >
+                Jul 2023 — Jul 2025 · WAM: 83 · GPA: 3.75/4.00
+              </p>
+            </div>
+          </div>
+
+          <div className="flex-1">
+            <h3
+              className="font-['Inika',serif] text-[20px] md:text-[24px] mb-4 md:mb-6"
+              style={{ color: textColor }}
+            >
+              Highlights
+            </h3>
+            <div className="flex flex-col gap-3">
+              <p
+                className="font-['Inika',serif] text-[14px] opacity-70 leading-relaxed"
+                style={{ color: textColor }}
+              >
+                🎓 Monash University Summer Research Scholarship for work on sequential decision-making visualisations.
+              </p>
+              <p
+                className="font-['Inika',serif] text-[14px] opacity-70 leading-relaxed"
+                style={{ color: textColor }}
+              >
+                🤝 Mentored at a girls-only hackathon with MindEmpowered NGO, contributing to children's mood assessment tools.
+              </p>
             </div>
           </div>
         </div>

@@ -35,29 +35,35 @@ function Leaf({ size = 60, rotate = 14, className = "", animation }: { size?: nu
 
 const experiences = [
   {
-    title: "Senior Product Designer",
-    org: "Canopy Studio",
-    period: "2024 - Present",
-    desc: "Leading design systems and product vision for a growing creative platform.",
+    title: "Full Stack Developer",
+    org: "Stormrake",
+    period: "Jun 2025 — Present",
+    desc: "Built automated email systems with AWS Lambda/SQS/SES, a one-click PDF report generator replacing manual Excel workflows for 500+ VIP clients, and secure MFA interfaces with React and Cognito.",
   },
   {
-    title: "UI/UX Designer",
-    org: "Verdant Labs",
-    period: "2022 - 2024",
-    desc: "Redesigned the core product experience, improving engagement by 40%.",
+    title: "Summer Researcher",
+    org: "ShortestPathLab · Monash University",
+    period: "Nov 2024 — Feb 2025",
+    desc: "Modernised a visualisation tool with a Monaco-based editor in React/TypeScript and built a Google Drive sharing feature for algorithm visualisations.",
   },
   {
-    title: "Junior Designer",
-    org: "Sunrise Digital",
-    period: "2020 - 2022",
-    desc: "Built branding and web experiences for early-stage startups.",
+    title: "Software Engineer",
+    org: "Content Turbine",
+    period: "Aug 2022 — Oct 2022",
+    desc: "Engineered a Tiptap rich text editor with integrated commenting, connected to a fine-tuned transformer model via a Python/Flask REST API.",
+  },
+  {
+    title: "Full Stack Developer Intern",
+    org: "TGH Tech",
+    period: "May 2022 — Jul 2022",
+    desc: "Led backend development of a community platform with Express.js and DynamoDB, implemented multi-role auth via AWS Cognito, and managed a team of 3 interns.",
   },
 ];
 
 export function AutumnExperiences({ darkness }: Props) {
   const skyColor = lerpColor("#b47400", "#0a1226", darkness);
   const treeColor = lerpColor("#7C4709", "#4a2d06", darkness);
-  const textColor = lerpColor("#1a1a1a", "#ffffff", darkness);
+  const textColor = lerpColor("#fff8e1", "#f5f0e0", darkness);
   const cardBorder = lerpColor("#7C4709", "#2a1f0a", darkness);
 
   return (
@@ -120,7 +126,7 @@ export function AutumnExperiences({ darkness }: Props) {
               </div>
               <p
                 className="font-['Inika',serif] text-[16px] opacity-80 mb-1"
-                style={{ color: lerpColor("#4a2d06", "#d4a44a", darkness) }}
+                style={{ color: lerpColor("#ffe0a0", "#e8c06a", darkness) }}
               >
                 {exp.org}
               </p>
