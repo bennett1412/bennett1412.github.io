@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
+import { buildThemeScript } from "./theme-tokens";
 import "../styles/index.css";
 
 export const viewport: Viewport = {
@@ -55,14 +57,24 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://bennett1412.github.io"),
 };
 
+// Generated at build time from theme-tokens.ts — sets every CSS variable
+// on <html> before the first paint. Zero flash.
+const themeScript = buildThemeScript();
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <head />
+      <body suppressHydrationWarning>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeScript}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,9 +1,3 @@
-import { lerpColor } from "./use-time-of-day";
-
-interface Props {
-  darkness: number;
-}
-
 const skills = [
   "TypeScript",
   "JavaScript",
@@ -113,48 +107,39 @@ function FlowerBackground({ stemColor, petalColor }: { stemColor: string; petalC
   );
 }
 
-export function SpringContact({ darkness }: Props) {
-  const skyColor = lerpColor("#d4ecd0", "#0e1f14", darkness);
-  const textColor = lerpColor("#1a2e1a", "#e0f0e0", darkness);
-  const accentColor = lerpColor("#c23074", "#f07aaf", darkness);
-  const cardBorder = lerpColor("#90c088", "#2a4a28", darkness);
-  const petalColor = lerpColor("#f0b0c8", "#6a3050", darkness);
-  const skillText = lerpColor("#2a4a28", "#a0d8a0", darkness);
-  const flowerStemColor = lerpColor("#5a9050", "#2a4a28", darkness);
-  const flowerPetalColor = lerpColor("#f0b0c8", "#8a4060", darkness);
-
+export function SpringContact() {
   return (
     <section
       id="spring"
       className="relative w-full min-h-screen overflow-hidden py-12 md:py-20"
-      style={{ backgroundColor: skyColor }}
+      style={{ backgroundColor: "var(--spring-sky)" }}
     >
       {/* Background decorative flower — hidden on mobile */}
       <div className="hidden md:block">
-        <FlowerBackground stemColor={flowerStemColor} petalColor={flowerPetalColor} />
+        <FlowerBackground stemColor="var(--spring-flower-stem)" petalColor="var(--spring-flower-petal)" />
       </div>
 
       {/* Floating petals — positioned to edges, away from content */}
       <div className="hidden md:block">
-        <Petal className="top-[8%] right-[10%] animate-bounce" size={24} color={petalColor} />
-        <Petal className="top-[22%] right-[5%]" size={30} color={petalColor} />
-        <Petal className="top-[45%] right-[15%]" size={20} color={petalColor} />
-        <Petal className="top-[65%] right-[8%]" size={26} color={petalColor} />
-        <Petal className="bottom-[12%] right-[20%]" size={22} color={petalColor} />
-        <Petal className="top-[35%] right-[3%]" size={18} color={petalColor} />
+        <Petal className="top-[8%] right-[10%] animate-bounce" size={24} color="var(--spring-petal)" />
+        <Petal className="top-[22%] right-[5%]" size={30} color="var(--spring-petal)" />
+        <Petal className="top-[45%] right-[15%]" size={20} color="var(--spring-petal)" />
+        <Petal className="top-[65%] right-[8%]" size={26} color="var(--spring-petal)" />
+        <Petal className="bottom-[12%] right-[20%]" size={22} color="var(--spring-petal)" />
+        <Petal className="top-[35%] right-[3%]" size={18} color="var(--spring-petal)" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 px-6 md:px-20 lg:px-32">
         <h2
           className="font-['Inika',serif] text-[36px] md:text-[64px] mb-3 md:mb-4"
-          style={{ color: textColor }}
+          style={{ color: "var(--spring-text)" }}
         >
           Get in Touch
         </h2>
         <p
           className="font-['Inika',serif] text-[14px] md:text-[18px] opacity-60 mb-8 md:mb-12 max-w-lg"
-          style={{ color: textColor }}
+          style={{ color: "var(--spring-text)" }}
         >
           Always up for building something interesting. Let's talk.
         </p>
@@ -164,7 +149,7 @@ export function SpringContact({ darkness }: Props) {
           <div className="flex-1">
             <h3
               className="font-['Inika',serif] text-[20px] md:text-[24px] mb-4 md:mb-6"
-              style={{ color: textColor }}
+              style={{ color: "var(--spring-text)" }}
             >
               Skills
             </h3>
@@ -174,9 +159,9 @@ export function SpringContact({ darkness }: Props) {
                   key={skill}
                   className="font-['Inika',serif] text-[13px] md:text-[14px] px-3 md:px-4 py-1.5 md:py-2 rounded-full border"
                   style={{
-                    backgroundColor: lerpColor("#a8d8a0", "#1e3a1c", darkness, 0.5),
-                    borderColor: cardBorder,
-                    color: skillText,
+                    backgroundColor: "var(--spring-skill-bg)",
+                    borderColor: "var(--spring-card-border)",
+                    color: "var(--spring-skill-text)",
                   }}
                 >
                   {skill}
@@ -190,13 +175,13 @@ export function SpringContact({ darkness }: Props) {
             <div
               className="p-6 md:p-8 rounded-lg border backdrop-blur-sm"
               style={{
-                backgroundColor: lerpColor("#c8e4c0", "#162418", darkness, 0.8),
-                borderColor: cardBorder,
+                backgroundColor: "var(--spring-card-bg)",
+                borderColor: "var(--spring-card-border)",
               }}
             >
               <h3
                 className="font-['Inika',serif] text-[20px] md:text-[24px] mb-4 md:mb-6"
-                style={{ color: textColor }}
+                style={{ color: "var(--spring-text)" }}
               >
                 Contact
               </h3>
@@ -204,7 +189,7 @@ export function SpringContact({ darkness }: Props) {
                 <a
                   href="mailto:bennettmadavana@gmail.com"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
-                  style={{ color: accentColor }}
+                  style={{ color: "var(--spring-accent)" }}
                 >
                   bennettmadavana@gmail.com
                 </a>
@@ -213,7 +198,7 @@ export function SpringContact({ darkness }: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
-                  style={{ color: accentColor }}
+                  style={{ color: "var(--spring-accent)" }}
                 >
                   LinkedIn
                 </a>
@@ -222,7 +207,7 @@ export function SpringContact({ darkness }: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
-                  style={{ color: accentColor }}
+                  style={{ color: "var(--spring-accent)" }}
                 >
                   GitHub
                 </a>
@@ -231,7 +216,7 @@ export function SpringContact({ darkness }: Props) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-['Inika',serif] text-[16px] transition-opacity hover:opacity-100 opacity-70"
-                  style={{ color: accentColor }}
+                  style={{ color: "var(--spring-accent)" }}
                 >
                   Portfolio
                 </a>
@@ -245,32 +230,32 @@ export function SpringContact({ darkness }: Props) {
           <div className="flex-1">
             <h3
               className="font-['Inika',serif] text-[20px] md:text-[24px] mb-4 md:mb-6"
-              style={{ color: textColor }}
+              style={{ color: "var(--spring-text)" }}
             >
               Education
             </h3>
             <div
               className="p-4 md:p-6 rounded-lg border backdrop-blur-sm"
               style={{
-                backgroundColor: lerpColor("#c8e4c0", "#162418", darkness, 0.8),
-                borderColor: cardBorder,
+                backgroundColor: "var(--spring-card-bg)",
+                borderColor: "var(--spring-card-border)",
               }}
             >
               <p
                 className="font-['Inika',serif] text-[16px] md:text-[18px]"
-                style={{ color: textColor }}
+                style={{ color: "var(--spring-text)" }}
               >
                 Master of Information Technology
               </p>
               <p
                 className="font-['Inika',serif] text-[14px] opacity-70 mt-1"
-                style={{ color: textColor }}
+                style={{ color: "var(--spring-text)" }}
               >
                 Monash University, Clayton
               </p>
               <p
                 className="font-['Inika',serif] text-[13px] opacity-50 mt-1"
-                style={{ color: textColor }}
+                style={{ color: "var(--spring-text)" }}
               >
                 Jul 2023 — Jul 2025 · WAM: 83 · GPA: 3.75/4.00
               </p>
@@ -280,20 +265,20 @@ export function SpringContact({ darkness }: Props) {
           <div className="flex-1">
             <h3
               className="font-['Inika',serif] text-[20px] md:text-[24px] mb-4 md:mb-6"
-              style={{ color: textColor }}
+              style={{ color: "var(--spring-text)" }}
             >
               Highlights
             </h3>
             <div className="flex flex-col gap-3">
               <p
                 className="font-['Inika',serif] text-[14px] opacity-70 leading-relaxed"
-                style={{ color: textColor }}
+                style={{ color: "var(--spring-text)" }}
               >
                 🎓 Monash University Summer Research Scholarship for work on sequential decision-making visualisations.
               </p>
               <p
                 className="font-['Inika',serif] text-[14px] opacity-70 leading-relaxed"
-                style={{ color: textColor }}
+                style={{ color: "var(--spring-text)" }}
               >
                 🤝 Mentored at a girls-only hackathon with MindEmpowered NGO, contributing to children's mood assessment tools.
               </p>
@@ -302,10 +287,10 @@ export function SpringContact({ darkness }: Props) {
         </div>
 
         {/* Footer */}
-        <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t" style={{ borderColor: cardBorder }}>
+        <div className="mt-12 md:mt-20 pt-6 md:pt-8 border-t" style={{ borderColor: "var(--spring-card-border)" }}>
           <p
             className="font-['Inika',serif] text-[13px] opacity-40"
-            style={{ color: textColor }}
+            style={{ color: "var(--spring-text)" }}
           >
             Designed with the rhythm of the seasons. 2026.
           </p>

@@ -1,10 +1,5 @@
-import { lerpColor } from "./use-time-of-day";
 import svgPaths from "../../imports/svg-0csyqho5mf";
 import { Stars } from "./stars";
-
-interface Props {
-  darkness: number;
-}
 
 function Leaf({ size = 60, rotate = 14, className = "", animation }: { size?: number; rotate?: number; className?: string; animation?: string }) {
   return (
@@ -60,19 +55,14 @@ const experiences = [
   },
 ];
 
-export function AutumnExperiences({ darkness }: Props) {
-  const skyColor = lerpColor("#b47400", "#0a1226", darkness);
-  const treeColor = lerpColor("#7C4709", "#4a2d06", darkness);
-  const textColor = lerpColor("#fff8e1", "#f5f0e0", darkness);
-  const cardBorder = lerpColor("#7C4709", "#2a1f0a", darkness);
-
+export function AutumnExperiences() {
   return (
     <section
       id="autumn"
       className="relative w-full min-h-screen overflow-hidden py-12 md:py-20"
-      style={{ backgroundColor: skyColor }}
+      style={{ backgroundColor: "var(--autumn-sky)" }}
     >
-      <Stars darkness={darkness} />
+      <Stars />
       {/* Background tree shape */}
       <svg
         className="absolute right-0 top-0 h-full w-[60%] opacity-60 hidden md:block"
@@ -80,8 +70,8 @@ export function AutumnExperiences({ darkness }: Props) {
         fill="none"
         preserveAspectRatio="xMaxYMin slice"
       >
-        <path d={svgPaths.p34f0ee80} fill={treeColor} />
-        <path d={svgPaths.p31ad2ac0} stroke={treeColor} strokeOpacity="0.8" />
+        <path d={svgPaths.p34f0ee80} fill="var(--autumn-tree)" />
+        <path d={svgPaths.p31ad2ac0} stroke="var(--autumn-tree)" strokeOpacity="0.8" />
       </svg>
 
       {/* Floating leaves — positioned to the right/edges, away from cards */}
@@ -95,7 +85,7 @@ export function AutumnExperiences({ darkness }: Props) {
       <div className="relative z-10 px-6 md:px-20 lg:px-32">
         <h2
           className="font-['Inika',serif] text-[36px] md:text-[64px] mb-8 md:mb-12"
-          style={{ color: textColor }}
+          style={{ color: "var(--autumn-text)" }}
         >
           Experiences
         </h2>
@@ -106,33 +96,33 @@ export function AutumnExperiences({ darkness }: Props) {
               key={exp.title}
               className="p-4 md:p-6 rounded-lg backdrop-blur-sm border"
               style={{
-                backgroundColor: lerpColor("#c98a10", "#141e33", darkness, 0.8),
-                borderColor: cardBorder,
+                backgroundColor: "var(--autumn-card-bg)",
+                borderColor: "var(--autumn-card-border)",
               }}
             >
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
                 <h3
                   className="font-['Inika',serif] text-[18px] md:text-[24px]"
-                  style={{ color: textColor }}
+                  style={{ color: "var(--autumn-text)" }}
                 >
                   {exp.title}
                 </h3>
                 <span
                   className="font-['Inika',serif] text-[14px] opacity-60"
-                  style={{ color: textColor }}
+                  style={{ color: "var(--autumn-text)" }}
                 >
                   {exp.period}
                 </span>
               </div>
               <p
                 className="font-['Inika',serif] text-[16px] opacity-80 mb-1"
-                style={{ color: lerpColor("#ffe0a0", "#e8c06a", darkness) }}
+                style={{ color: "var(--autumn-org-text)" }}
               >
                 {exp.org}
               </p>
               <p
                 className="font-['Inika',serif] text-[14px] opacity-60"
-                style={{ color: textColor }}
+                style={{ color: "var(--autumn-text)" }}
               >
                 {exp.desc}
               </p>

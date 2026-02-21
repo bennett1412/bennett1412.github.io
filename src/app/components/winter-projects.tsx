@@ -1,9 +1,4 @@
-import { lerpColor } from "./use-time-of-day";
 import { Stars } from "./stars";
-
-interface Props {
-  darkness: number;
-}
 
 const projects = [
   {
@@ -58,20 +53,14 @@ function Snowflake({ left, delay, size = 28 }: { left: string; delay: string; si
   );
 }
 
-export function WinterProjects({ darkness }: Props) {
-  const skyColor = lerpColor("#93b1ff", "#0e1a30", darkness);
-  const textColor = lerpColor("#1a1a3a", "#e0e8ff", darkness);
-  const cardBorder = lerpColor("#7a9ae0", "#2a3a5e", darkness);
-  const tagBg = lerpColor("#6b8fd6", "#1e2e50", darkness);
-  const tagText = lerpColor("#1a1a3a", "#a0b8ff", darkness);
-
+export function WinterProjects() {
   return (
     <section
       id="winter"
       className="relative w-full min-h-screen overflow-hidden py-12 md:py-20"
-      style={{ backgroundColor: skyColor }}
+      style={{ backgroundColor: "var(--winter-sky)" }}
     >
-      <Stars darkness={darkness} />
+      <Stars />
       {/* Snowflakes */}
       <Snowflake left="15%" delay="0s" size={26} />
       <Snowflake left="42%" delay="7s" size={20} />
@@ -82,7 +71,7 @@ export function WinterProjects({ darkness }: Props) {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `linear-gradient(180deg, transparent 0%, ${lerpColor("#93b1ff", "#0e1a30", darkness, 0.25)} 50%, transparent 100%)`,
+          background: `linear-gradient(180deg, transparent 0%, var(--winter-fog) 50%, transparent 100%)`,
         }}
       />
 
@@ -90,13 +79,13 @@ export function WinterProjects({ darkness }: Props) {
       <div className="relative z-10 px-6 md:px-20 lg:px-32">
         <h2
           className="font-['Inika',serif] text-[36px] md:text-[64px] mb-3 md:mb-4"
-          style={{ color: textColor }}
+          style={{ color: "var(--winter-text)" }}
         >
           Projects
         </h2>
         <p
           className="font-['Inika',serif] text-[14px] md:text-[18px] opacity-60 mb-8 md:mb-12 max-w-lg"
-          style={{ color: textColor }}
+          style={{ color: "var(--winter-text)" }}
         >
            Things I've built on the side.
         </p>
@@ -107,21 +96,21 @@ export function WinterProjects({ darkness }: Props) {
               key={proj.title}
               className="p-4 md:p-6 rounded-lg backdrop-blur-sm border transition-transform hover:scale-[1.02]"
               style={{
-                backgroundColor: lerpColor("#a3bfff", "#141e38", darkness, 0.8),
-                borderColor: cardBorder,
+                backgroundColor: "var(--winter-card-bg)",
+                borderColor: "var(--winter-card-border)",
               }}
             >
               <div className="flex items-center gap-3 mb-3">
                 <span
                   className="font-['Inika',serif] text-[12px] px-3 py-1 rounded-full"
-                  style={{ backgroundColor: tagBg, color: tagText }}
+                  style={{ backgroundColor: "var(--winter-tag-bg)", color: "var(--winter-tag-text)" }}
                 >
                   {proj.tag}
                 </span>
               </div>
               <h3
                 className="font-['Inika',serif] text-[22px] md:text-[26px] mb-2"
-                style={{ color: textColor }}
+                style={{ color: "var(--winter-text)" }}
               >
                 {proj.link ? (
                   <a href={proj.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
@@ -133,7 +122,7 @@ export function WinterProjects({ darkness }: Props) {
               </h3>
               <p
                 className="font-['Inika',serif] text-[14px] opacity-60 leading-relaxed"
-                style={{ color: textColor }}
+                style={{ color: "var(--winter-text)" }}
               >
                 {proj.desc}
               </p>

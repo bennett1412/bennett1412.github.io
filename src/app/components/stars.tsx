@@ -1,7 +1,3 @@
-interface Props {
-  darkness: number;
-}
-
 // Deterministic star positions so they don't shift on re-render
 const starPositions = [
   { x: 8, y: 12, size: 2, delay: 0 },
@@ -28,15 +24,16 @@ const starPositions = [
   { x: 52, y: 85, size: 1.5, delay: 1.9 },
 ];
 
-export function Stars({ darkness }: Props) {
-  // Stars only appear when it's dark (darkness > 0.4)
-  const starOpacity = Math.max(0, (darkness - 0.4) / 0.6);
-  if (starOpacity <= 0) return null;
-
+/**
+ * Stars always render — visibility is controlled by the CSS variable
+ * --star-opacity (0 in day, 1 at night), set by the blocking script.
+ * No conditional rendering = no flash.
+ */
+export function Stars() {
   return (
     <div
       className="absolute inset-0 pointer-events-none z-[1]"
-      style={{ opacity: starOpacity }}
+      style={{ opacity: "var(--star-opacity)" } as React.CSSProperties}
     >
       {starPositions.map((star, i) => (
         <div

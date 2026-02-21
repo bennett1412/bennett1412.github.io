@@ -1,20 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { lerpColor } from "./use-time-of-day";
-
-interface Props {
-  darkness: number;
-}
 
 const seasons = [
-  { id: "summer", label: "Summer", emoji: "\u2600" },
-  { id: "autumn", label: "Autumn", emoji: "\uD83C\uDF42" },
-  { id: "winter", label: "Winter", emoji: "\u2744" },
-  { id: "spring", label: "Spring", emoji: "\uD83C\uDF38" },
+  { id: "summer", label: "Summer", emoji: "☀" },
+  { id: "autumn", label: "Autumn", emoji: "🍂" },
+  { id: "winter", label: "Winter", emoji: "❄" },
+  { id: "spring", label: "Spring", emoji: "🌸" },
 ];
 
-export function Navigation({ darkness }: Props) {
+export function Navigation() {
   const [active, setActive] = useState("summer");
 
   useEffect(() => {
@@ -37,9 +32,6 @@ export function Navigation({ darkness }: Props) {
     return () => observer.disconnect();
   }, []);
 
-  const dotActive = lerpColor("#1a1a2e", "#ffffff", darkness);
-  const dotInactive = lerpColor("#1a1a2e", "#ffffff", darkness) + "40";
-
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -58,7 +50,7 @@ export function Navigation({ darkness }: Props) {
         >
           <span
             className="absolute right-8 font-['Inika',serif] text-[12px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-            style={{ color: dotActive }}
+            style={{ color: "var(--nav-dot-active)" }}
           >
             {label}
           </span>
@@ -67,7 +59,7 @@ export function Navigation({ darkness }: Props) {
             style={{
               width: active === id ? 10 : 6,
               height: active === id ? 10 : 6,
-              backgroundColor: active === id ? dotActive : dotInactive,
+              backgroundColor: active === id ? "var(--nav-dot-active)" : "var(--nav-dot-inactive)",
             }}
           />
         </button>
